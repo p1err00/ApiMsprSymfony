@@ -28,9 +28,9 @@ class Coupon
     private $number_of_coupon;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
-    private $link_qrcode;
+    private $promotion;
 
     public function getId(): ?int
     {
@@ -61,14 +61,14 @@ class Coupon
         return $this;
     }
 
-    public function getLinkQrcode(): ?string
+    public function getPromotion(): ?int
     {
-        return $this->link_qrcode;
+        return $this->promotion;
     }
 
-    public function setLinkQrcode(string $link_qrcode): self
+    public function setPromotion(int $promotion): self
     {
-        $this->link_qrcode = $link_qrcode;
+        $this->promotion = $promotion;
 
         return $this;
     }
